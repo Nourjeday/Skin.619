@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ClothingStore</string>
+    <string name="search_bar">Search Brand or Product...</string>
+</resources>

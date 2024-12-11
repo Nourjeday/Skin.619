@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="35dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Search Bar and Icons Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="30dp"
+                    android:backgroundTint="#f3f3f2"
+                    android:layout_weight="1"
+                    app:strokeColor="#e9e9e9">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="13dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/search" />
+
+                        <EditText
+                            android:id="@+id/searchInput"
+                            android:layout_width="wrap_content"
+                            android:layout_height="48dp"
+                            android:inputType="textFilter"
+                            android:hint="@string/search_bar"
+                            android:textColor="@color/grey"
+                            android:textSize="16sp"
+                            android:background="@null"
+                            android:layout_marginLeft="10dp"
+                            android:paddingRight="10dp" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/notification"
+                    android:background="@drawable/background_circle"
+                    android:padding="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp" />
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/checkout"
+                    android:background="@drawable/background_circle"
+                    android:padding="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <!-- Special Sale Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#db926d"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="25dp"
+                app:strokeColor="#e9e9e9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Get special sale up to 50%"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:text="Shop Now"
+                            android:textSize="17dp"
+                            android:backgroundTint="@color/white"
+                            android:textColor="#c5cdc1"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/woman" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Category Buttons -->
+<!--            <HorizontalScrollView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:scrollbars="none">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:text="All"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:backgroundTint="#f3f3f2"-->
+<!--                        app:strokeColor="#e9e9e9"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginLeft="10dp"/>-->
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:text="Newest"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:backgroundTint="#f3f3f2"-->
+<!--                        app:strokeColor="#e9e9e9"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginLeft="10dp"/>-->
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:text="Popular"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:backgroundTint="#f3f3f2"-->
+<!--                        app:strokeColor="#e9e9e9"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginLeft="10dp"/>-->
+
+<!--                    <com.google.android.material.button.MaterialButton-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="48dp"-->
+<!--                        android:text="Skin"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:backgroundTint="#f3f3f2"-->
+<!--                        app:strokeColor="#e9e9e9"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginLeft="10dp"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--            </HorizontalScrollView>-->
+
+            <!-- Recommended Section Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended for you"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/seeAllText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See All"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="7dp"
+                    android:textSize="18dp"
+                    android:layout_marginRight="3dp" />
+
+                <ImageView
+                    android:id="@+id/seeAllIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/next"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+
+            <!-- RecyclerView for Products -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/homeselected"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/discoverbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:src="@drawable/discovery"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Discover"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wishlistbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/like"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wishlist"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profilebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
